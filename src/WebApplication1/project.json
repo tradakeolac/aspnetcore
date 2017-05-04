@@ -44,6 +44,12 @@
     "preserveCompilationContext": true
   },
 
+  "runtimes": {
+    "win7-x64": {},
+    "osx.10.11-x64": {},
+    "ubuntu.14.04-x64": {}
+  },
+   
   "runtimeOptions": {
     "configProperties": {
       "System.GC.Server": true
@@ -60,7 +66,7 @@
   },
 
   "scripts": {
-    "prepublish": [ "bower install", "dotnet bundle" ],
+    "prepublish": [ "dotnet bundle" ],
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
   }
 }
